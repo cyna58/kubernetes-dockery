@@ -1,0 +1,18 @@
+apiVersion: argoproj.io/v1alpha1
+kind: Application
+metadata:
+  name: poe
+  namespace: argocd
+spec:
+  project: default
+  source:
+    repoURL: https://github.com/cyna58/kubernetes-dockery.git
+    targetRevision: HEAD
+    path: poe-woc
+  destination:
+    server: https://kubernetes.default.svc
+    namespace: default
+  syncPolicy:
+    automated:
+      prune: true
+      selfHeal: true
