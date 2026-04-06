@@ -21,7 +21,7 @@ spec:
     spec:
       containers:
       - name: backend-k8s
-        image: cyna58/nauka-kubernetes:poe_v1
+        image: cyna58/nauka-kubernetes:poe_v5
         ports:
         - containerPort: 3001
         resources:
