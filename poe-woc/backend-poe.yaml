@@ -21,11 +21,11 @@ spec:
         - containerPort: 3001
         resources:
           requests:
-            memory: "250Mi"
-            cpu: "1m"
+            memory: "100Gi"
+            cpu: "250m"
           limits:
-            memory: "500Mi"
-            cpu: "2m"
+            memory: "2000Gi"
+            cpu: "500m"
         env: 
         - name: MONGO_USER
           valueFrom:
